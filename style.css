@@ -1,7 +1,6 @@
 body{
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+        background-color: rgb(61, 155, 155);
+
 }
 input{
     background-color: rgb(215, 222, 224);

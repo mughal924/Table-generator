@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <center>
+  <div class="container">
+    <h1>Table Generator</h1>
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate Table</button>
+
+    <div class="output" id="output"></div>
+  </div>
+ </center>
+  <script>
+    function generateTable() {
+      let num = +document.getElementById("num").value;
+      let output = document.getElementById("output");
+
+      if (!num) {
+        output.innerHTML = "Please enter a valid number!";
+        return;
+      }
+
+      let result = "";
+      for (let i = 1; i <= 10; i++) {
+        result += `${num} x ${i} = ${num * i}<br>`;
+      }
+
+      output.innerHTML = result;
+    }
+  </script>
+
+</body>
+</html>
